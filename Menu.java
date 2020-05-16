@@ -3,7 +3,6 @@ import greenfoot.*;
 public class Menu extends World
 {
     GifImage bg = new GifImage("menu/bg.gif");
-    
     public Menu()
     {    
         super(1032, 624, 1);
