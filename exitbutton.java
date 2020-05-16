@@ -8,5 +8,9 @@ public class exitbutton extends Actor
     }
     public void act() 
     {
+        if(Greenfoot.mouseClicked(this))
+        {
+            Greenfoot.stop();
+        }
     }    
 }
