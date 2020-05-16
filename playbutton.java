@@ -20,6 +20,10 @@ public class playbutton extends Actor
                 if (object == this)
                 {
                     button.scale(248, 83);
+                    if(Greenfoot.mouseClicked(this))
+                    {
+                        Greenfoot.setWorld(new World1());
+                    }
                 }
             }
         }
