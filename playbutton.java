@@ -1,9 +1,11 @@
 import greenfoot.*;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class playbutton extends Actor
 {
     GreenfootImage button = new GreenfootImage("menu/playButton.png");
+    
     
     public playbutton()
     {
@@ -20,12 +22,18 @@ public class playbutton extends Actor
                 if (object == this)
                 {
                     button.scale(248, 83);
-                    if(Greenfoot.mouseClicked(this))
-                    {
-                        Greenfoot.setWorld(new World1());
-                    }
+                     if(Greenfoot.mouseClicked(this))
+                     {
+                         GreenfootSound clickSound = new GreenfootSound("ClickSound/Mouse Click - Sound Effect (HD).mp3");
+                         clickSound.setVolume(30); 
+                         clickSound.play();
+                         Greenfoot.setWorld(new World1());
+                     }
+                   
                 }
             }
         }
     }
+    
+
 }
