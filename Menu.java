@@ -9,6 +9,7 @@ public class Menu extends World
         //Greenfoot.playSound("menu/soundtrack.mp3");
         addObject(new playbutton(), 516, 420);
         addObject(new exitbutton(), 516, 490);
+        setBackground(bg.getCurrentImage());
     }
     
     public void act()
