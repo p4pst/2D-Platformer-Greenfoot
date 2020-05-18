@@ -4,7 +4,7 @@ public class Menu extends World
 {
     GifImage bg = new GifImage("menu/bg.gif");
     public static GreenfootSound sound = new GreenfootSound("theme_music.mp3");
-    Levels world = null;
+    Level1 world = null;
     public Menu()
     {
         super(1032, 624, 1);
@@ -23,7 +23,7 @@ public class Menu extends World
     public void started()
     {
         sound.play();
-        sound.setVolume(40);
+        sound.setVolume(15);
     }
     public void stopped()
     {     
