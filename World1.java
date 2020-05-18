@@ -1,32 +1,14 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
-/**
- * Write a description of class GameStartMap here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class World1 extends World
 {
-
-    /**
-     * Constructor for objects of class GameStartMap.
-     * 
-     */
     public World1()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1032, 624, 1);
-        prepare();
+        buildWorld();
     }
-
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
-    private void prepare()
+    private void buildWorld()
     {
-        addObject(new Character(),351,270);
-        addObject(new GoBackToMenu(),100,580);
+        addObject(new GoBackToMenu(), 60, 605);
     }
 }
