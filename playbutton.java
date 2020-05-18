@@ -6,7 +6,6 @@ public class playbutton extends Actor
 {
     GreenfootImage button = new GreenfootImage("menu/playButton.png");
     
-    
     public playbutton()
     {
         setImage(button);
@@ -22,14 +21,12 @@ public class playbutton extends Actor
                 if (object == this)
                 {
                     button.scale(248, 83);
-                     if(Greenfoot.mouseClicked(this))
-                     {
-                         GreenfootSound clickSound = new GreenfootSound("ClickSound/Mouse Click - Sound Effect (HD).mp3");
-                         clickSound.setVolume(30); 
-                         clickSound.play();
-                         Greenfoot.setWorld(new World1());
-                     }
-                   
+                    if(Greenfoot.mouseClicked(this))
+                    {
+                        Menu world = (Menu) getWorld();
+                        world.sound.stop();
+                        Greenfoot.setWorld(new World1());   
+                    }
                 }
             }
         }
