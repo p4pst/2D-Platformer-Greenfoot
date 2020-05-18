@@ -4,7 +4,6 @@ public class Menu extends World
 {
     GifImage bg = new GifImage("menu/bg.gif");
     public static GreenfootSound sound = new GreenfootSound("theme_music.mp3");
-    Levels world = null;
     public Menu()
     {
         super(1032, 624, 1);

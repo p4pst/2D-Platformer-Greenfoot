@@ -3,6 +3,7 @@ import greenfoot.*;
 public class Levels extends World
 {
     GifImage bg = new GifImage("menu/bg.gif");
+    Level1 world = null;
     public Levels()
     {    
         super(1032, 624, 1);
