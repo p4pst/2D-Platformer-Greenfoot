@@ -27,7 +27,7 @@ public class playbutton extends Actor
                          GreenfootSound clickSound = new GreenfootSound("ClickSound/Mouse Click - Sound Effect (HD).mp3");
                          clickSound.setVolume(30); 
                          clickSound.play();
-                         Greenfoot.setWorld(new World1());
+                         Greenfoot.setWorld(new LevelMenu());
                      }
                    
                 }
