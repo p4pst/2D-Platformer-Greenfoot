@@ -8,9 +8,9 @@ public class Menu extends World
         super(1032, 624, 1);
         
         addObject(new playbutton(), 516, 420);
-        addObject(new exitbutton(), 516, 490);
+        addObject(new exitbutton(), 516, 500);
         setBackground(bg.getCurrentImage());
-        MusicInMenu();
+        //MusicInMenu();
     }
     
     public void act()
