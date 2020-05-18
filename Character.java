@@ -33,6 +33,7 @@ public class Character extends Actor
             setImage(air.getCurrentImage());
             jump();
         }
+
     }
 
     public boolean platformAbove()
