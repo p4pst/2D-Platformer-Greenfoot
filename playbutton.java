@@ -25,7 +25,7 @@ public class playbutton extends Actor
                     {
                         Menu world = (Menu) getWorld();
                         world.sound.stop();
-                        Greenfoot.setWorld(new World1());   
+                        Greenfoot.setWorld(new LevelMenu());   
                     }
                 }
             }

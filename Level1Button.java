@@ -28,7 +28,7 @@ public class Level1Button extends Actor
         }
         if(Greenfoot.mouseClicked(this))
         {
-            Greenfoot.stop();
+            Greenfoot.setWorld(new World1());
             level1.scale(165, 55);
         }
     }    

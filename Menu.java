@@ -26,7 +26,7 @@ public class Menu extends World
     public void started()
     {
         sound.play();
-        sound.setVolume(40);
+        sound.setVolume(20);
     }
     public void stopped()
     {     

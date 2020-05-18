@@ -18,12 +18,12 @@ public class Character extends Actor
         checkRightWalls();
         checkLeftWalls();
         platformAbove();
-        if(Greenfoot.isKeyDown("right"))
+        if(Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d"))
         {
            setLocation(getX() + 2, getY());
            setImage(run_right.getCurrentImage());
         }
-        if(Greenfoot.isKeyDown("left"))
+        if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a"))
         {
            setLocation(getX() - 2, getY());
            setImage(run_right.getCurrentImage());
@@ -40,7 +40,10 @@ public class Character extends Actor
         int spriteHeight = getImage().getHeight();
         int yDistance = (int)(spriteHeight/-2);
         Actor ceiling = getOneObjectAtOffset(0, yDistance, blocks.class);
-        if (ceiling == null) return false;
+        if (ceiling == null) 
+        {
+            return false;
+        }
         vSpeed = 1;
         bopHead(ceiling);
         return true;
