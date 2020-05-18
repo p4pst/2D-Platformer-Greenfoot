@@ -31,6 +31,4 @@ public class playbutton extends Actor
             }
         }
     }
-    
-
 }

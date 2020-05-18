@@ -22,7 +22,7 @@ public class Menu extends World
     }   
     public void started()
     {
-        //sound.play();
+        sound.play();
         sound.setVolume(40);
     }
     public void stopped()
