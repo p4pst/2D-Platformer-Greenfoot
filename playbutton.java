@@ -23,8 +23,6 @@ public class playbutton extends Actor
                     button.scale(248, 83);
                     if(Greenfoot.mouseClicked(this))
                     {
-                        //Menu world = (Menu) getWorld();
-                        //world.sound.stop();
                         Greenfoot.setWorld(new Levels());   
                     }
                 }
