@@ -27,6 +27,6 @@ public class World1 extends World
     private void prepare()
     {
         addObject(new Character(),351,270);
-        addObject(new GoBackToMenu(),84,600);
+        addObject(new GoBackToMenu(),100,580);
     }
 }

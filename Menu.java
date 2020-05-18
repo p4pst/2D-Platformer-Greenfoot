@@ -5,13 +5,12 @@ public class Menu extends World
     GifImage bg = new GifImage("menu/bg.gif");
     public Menu()
     {    
-        super(1280, 720, 1);
+        super(1032, 624, 1);
         
-        addObject(new playbutton(), 640, 520);
-        addObject(new exitbutton(), 640, 600);
-        addObject(new worldof(), 200, 400);
+        addObject(new playbutton(), 516, 420);
+        addObject(new exitbutton(), 516, 500);
         setBackground(bg.getCurrentImage());
-        MusicInMenu();
+        //MusicInMenu();
     }
     
     public void act()
