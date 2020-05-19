@@ -6,9 +6,9 @@ public class Character extends Actor
     GifImage run_right = new GifImage("character/run.gif");
     GifImage air = new GifImage("character/air.gif");
     
-    private int vSpeed = 0;
+    private int vSpeed = 5;
     private int acceleration = 1;
-    private int jumpStrength = 12;
+    public static int jumpStrength = 12;
     private boolean jumping;
     
     public void act() 

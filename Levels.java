@@ -8,14 +8,9 @@ public class Levels extends World
     {    
         super(1032, 624, 1);
         setBackground(bg.getCurrentImage());
-        buildWorld();
         prepare();
     }
 
-    public void buildWorld()
-    {
-        addObject(new GoBackToMenu(), 60, 605);
-    }
 
     public void act()
     {
@@ -45,7 +40,7 @@ public class Levels extends World
         level1Button.setLocation(128,60);
         level1Button.setLocation(119,47);
         GoBackToMenu goBackToMenu = new GoBackToMenu();
-        addObject(goBackToMenu,829,519);
-        goBackToMenu.setLocation(949,583);
+        addObject(goBackToMenu,869,531);
+        goBackToMenu.setLocation(932,591);
     }
 }
