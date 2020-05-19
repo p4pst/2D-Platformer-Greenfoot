@@ -10,11 +10,12 @@ public class Character extends Actor
     private int acceleration = 1;
     public static int jumpStrength = 12;
     private boolean jumping;
-    
+
     public void act() 
     {
         setImage(idle.getCurrentImage());
         checkFall();
+        shoot();
         checkRightWalls();
         checkLeftWalls();
         platformAbove();
@@ -33,14 +34,33 @@ public class Character extends Actor
             setImage(air.getCurrentImage());
             jump();
         }
+        if(isTouching(Enemy.class))
+        {
+             getWorld().removeObject(this);
+             Greenfoot.setWorld(new GameOver());
+        }
 
     }
+    
+    public void shoot()
+    {
+        if(Greenfoot.mousePressed(null) && !Level1.noMoreBullets)
+        {
+            Level1.bullets--;
+            Bullet bullet = new Bullet();
+            getWorld().addObject(bullet, getX(), getY());
+            bullet.turnTowards(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
+        }
+    }
+        
+        
+         
 
     public boolean platformAbove()
     {
         int spriteHeight = getImage().getHeight();
         int yDistance = (int)(spriteHeight/-2);
-        Actor ceiling = getOneObjectAtOffset(0, yDistance, blocks.class);
+        Actor ceiling = getOneObjectAtOffset(0, yDistance, Scroller.class);
         if (ceiling == null) 
         {
             return false;
@@ -54,7 +74,7 @@ public class Character extends Actor
     {
         int spriteWidth = getImage().getWidth();
         int xDistance = (int)(spriteWidth/2);
-        Actor rightWall = getOneObjectAtOffset(xDistance, 0, blocks.class);
+        Actor rightWall = getOneObjectAtOffset(xDistance, 0, Scroller.class);
         if(rightWall == null)
         {
             return false;
@@ -75,7 +95,7 @@ public class Character extends Actor
     {
         int spriteWidth = getImage().getWidth();
         int xDistance = (int)(spriteWidth/-2);
-        Actor leftWall = getOneObjectAtOffset(xDistance, 0, blocks.class);
+        Actor leftWall = getOneObjectAtOffset(xDistance, 0, Scroller.class);
         if(leftWall == null) return false;
         stopByLeftWall(leftWall);
         return true;
@@ -104,7 +124,7 @@ public class Character extends Actor
 
     public boolean onGround()
     {
-        Actor ground = getOneObjectAtOffset(0, getImage().getHeight()/2, blocks.class);
+        Actor ground = getOneObjectAtOffset(0, getImage().getHeight()/2, Scroller.class);
         if(ground == null)
         {
             return false;
