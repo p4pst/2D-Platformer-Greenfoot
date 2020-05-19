@@ -1,15 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class blocks here.
+ * Write a description of class Clouds here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class blocks extends Actor
+public class Clouds extends Actor
 {
+    GreenfootImage clouds = new GreenfootImage("sprites/clouds/bg_cloud1.png");
     public void act() 
     {
-        // Add your action code here.
+        setImage(clouds);
     }    
 }

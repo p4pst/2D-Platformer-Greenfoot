@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 public class Level1Unlocked extends Actor
 {
     GreenfootImage button = new GreenfootImage("levels/level1.png");
-    Levels world = null;
+    
     
     public Level1Unlocked()
     {
@@ -24,8 +24,7 @@ public class Level1Unlocked extends Actor
                     button.scale(248, 83);
                     if(Greenfoot.mouseClicked(this))
                     {
-                        //Menu world = (Menu) getWorld();
-                        //world.sound.stop();
+                        
                         Greenfoot.setWorld(new Level1());   
                     }
                 }

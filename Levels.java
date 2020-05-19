@@ -47,5 +47,8 @@ public class Levels extends World
         addObject(level1Unlocked,118,64);
         level1Unlocked.setLocation(125,77);
         level1Unlocked.setLocation(121,79);
+        Level2 level2 = new Level2();
+        addObject(level2,302,85);
+        level2.setLocation(338,85);
     }
 }
