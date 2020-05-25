@@ -23,7 +23,7 @@ public class Level1 extends World
         img4 = new NormalGrassBlock();
         addObject(img4, getWidth() + getWidth()/2, getHeight()/2); */
         
-        Character.jumpStrength = 16;
+        Character.jumpStrength = 20;
     }
 
     public void act()
@@ -125,5 +125,24 @@ public class Level1 extends World
         Enemy enemy = new Enemy();
         addObject(enemy,207,397);
         enemy.setLocation(225,403);
+        water5.setLocation(463,599);
+        water5.setLocation(474,599);
+        enemy.setLocation(230,401);
+        enemy.setLocation(254,398);
+        removeObject(enemy);
+        Enemy enemy2 = new Enemy();
+        addObject(enemy2,228,397);
+        enemy2.setLocation(225,399);
+        enemy2.setLocation(231,388);
+        removeObject(enemy2);
+        normalGrassBlock6.setLocation(377,439);
+        normalGrassBlock5.setLocation(229,425);
+        normalGrassBlock5.setLocation(213,430);
+        normalGrassBlock6.setLocation(359,446);
+        MovingBlock movingBlock = new MovingBlock();
+        addObject(movingBlock,481,441);
+        movingBlock.setLocation(513,443);
+        movingBlock.setLocation(575,444);
+        clouds5.setLocation(498,89);
     }
 }

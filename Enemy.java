@@ -9,6 +9,8 @@ public class Enemy extends Actor
     {
        counter++;
        moveAround();
+       setImage("Enemy05/idle08.png");
+       setImage("Enemy05/idle09.png");
     }  
     
     public void moveAround()

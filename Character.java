@@ -10,6 +10,8 @@ public class Character extends Actor
     private int acceleration = 1;
     public static int jumpStrength = 12;
     private boolean jumping;
+    private int counter = 0;
+    private int speed = -3;
 
     public void act() 
     {
@@ -19,6 +21,8 @@ public class Character extends Actor
         checkRightWalls();
         checkLeftWalls();
         platformAbove();
+        counter++;
+        moveWithMovingBlock();
         if(Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d"))
         {
            setLocation(getX() + 2, getY());
@@ -50,6 +54,22 @@ public class Character extends Actor
             Bullet bullet = new Bullet();
             getWorld().addObject(bullet, getX(), getY());
             bullet.turnTowards(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
+        }
+    }
+    
+    public void moveWithMovingBlock()
+    {
+        
+        if(isTouching(MovingBlock.class) && !Greenfoot.isKeyDown("d") && !Greenfoot.isKeyDown("a"))
+        {
+        if(MovingBlock.counter < 30)
+        {
+            setLocation(getX() + MovingBlock.speed, getY());
+        }
+        else{
+            MovingBlock.speed =- MovingBlock.speed;
+            MovingBlock.counter = 0;
+        }
         }
     }
         

@@ -14,6 +14,11 @@ public class Bullet extends Actor
         setImage("sprites/blocks/mushroom2.png");
         turnToMouse();
         move(speed);
+        
+        if(isTouching(NormalGrassBlock.class))
+        {
+            removeTouching(Bullet.class);
+        }
     }    
     
     public void turnToMouse()
