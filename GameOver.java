@@ -14,6 +14,7 @@ public class GameOver extends World
     {    
         super(1032, 624, 1); 
         Level1.bullets = 15;
+        Level1.carrots = 0;
         prepare();
         
     }

@@ -6,6 +6,7 @@ public class Level1 extends World
     //private NormalGrassBlock img3, img4;
     public static int bullets = 15;
     public static boolean noMoreBullets = false;
+    public static int carrots = 0;
     public Level1()
     {    
         super(1032, 624, 1, false);
@@ -31,12 +32,14 @@ public class Level1 extends World
         setBackground("sprites/bg.png");
         if(bullets > 0)
         {
-            getBackground().drawImage(new GreenfootImage("Armor: " + bullets, 30, null, null), 520, 520);
+            getBackground().drawImage(new GreenfootImage("Ammo: " + bullets, 30, null, null), 520, 520);
         }
         else{
-           getBackground().drawImage(new GreenfootImage("No more armor left!", 30, null, null), 520, 520); 
+           getBackground().drawImage(new GreenfootImage("No more Ammo left!", 30, null, null), 520, 520); 
            noMoreBullets = true;
         }
+        
+        getBackground().drawImage(new GreenfootImage("" + carrots, 30, null, null), 20, 20);
         
         /*if(Greenfoot.isKeyDown("d"))
         {
@@ -144,5 +147,29 @@ public class Level1 extends World
         movingBlock.setLocation(513,443);
         movingBlock.setLocation(575,444);
         clouds5.setLocation(498,89);
+        Enemy enemy3 = new Enemy();
+        addObject(enemy3,210,396);
+        enemy3.setLocation(214,395);
+        enemy3.setLocation(234,393);
+        enemy3.setLocation(241,391);
+        enemy3.setLocation(249,380);
+        enemy3.setLocation(279,376);
+        enemy3.setLocation(283,380);
+        enemy3.setLocation(258,380);
+        enemy3.setLocation(233,377);
+        Carrot carrot = new Carrot();
+        addObject(carrot,144,374);
+        Carrot carrot2 = new Carrot();
+        addObject(carrot2,315,391);
+        movingBlock.setLocation(549,443);
+        Carrot carrot3 = new Carrot();
+        addObject(carrot3,898,554);
+        carrot3.setLocation(868,550);
+        carrot3.setLocation(850,20);
+        carrot3.setLocation(860,239);
+        carrot3.setLocation(86,51);
+        carrot3.setLocation(55,28);
+        carrot3.setLocation(57,37);
+        carrot.setLocation(63,360);
     }
 }

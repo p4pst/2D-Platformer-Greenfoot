@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MovingBlock extends Scroller
 {
     public static int counter = 0;
-    public static int speed = -3;
+    public static int speed = -2;
     public void act() 
     {
         setImage("sprites/blocks/ground4.png");

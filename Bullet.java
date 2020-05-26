@@ -15,9 +15,9 @@ public class Bullet extends Actor
         turnToMouse();
         move(speed);
         
-        if(isTouching(NormalGrassBlock.class))
+        if(isTouching(NormalGrassBlock.class) || isTouching(MovingBlock.class))
         {
-            removeTouching(Bullet.class);
+             getWorld().removeObject(this);
         }
     }    
     
