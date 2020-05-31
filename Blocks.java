@@ -1,9 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Clouds extends Blocks
+public class Blocks extends Actor
 {
+    
     public void act() 
     {
-        setImage("sprites/clouds/bg_cloud1.png");
-    }    
+        
+    }  
+
 }

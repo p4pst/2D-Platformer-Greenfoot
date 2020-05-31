@@ -7,6 +7,8 @@ public class Enemy extends Actor
     int counter = 0;
     int frame = 1;
     int animateCounter = 0;
+    Character character;
+    Enemy enemy;
     public void act() 
     {
        counter++;
@@ -16,33 +18,34 @@ public class Enemy extends Actor
        {
        if(frame == 1)
        {
-           setImage("Enemy05/walk01.png");
+           setImage("level1/Enemy/walk01.png");
        }
        else if(frame == 2)
        {
-           setImage("Enemy05/walk02.png");
+           setImage("level1/Enemy/walk02.png");
        }
        else if(frame == 3)
        {
-           setImage("Enemy05/walk03.png");
+           setImage("level1/Enemy/walk03.png");
        }
        else if(frame == 4)
        {
-           setImage("Enemy05/walk04.png");
+           setImage("level1/Enemy/walk04.png");
        }
        else if(frame == 5)
        {
-           setImage("Enemy05/walk05.png");
+           setImage("level1/Enemy/walk05.png");
        }
        else if(frame == 6)
        {
-           setImage("Enemy05/walk06.png");
+           setImage("level1/Enemy/walk06.png");
            frame = 1;
        }
        frame++;
        }  
-     }
-    
+       
+
+    }
     public void moveAround()
     {
         if(counter < 40)
@@ -60,4 +63,6 @@ public class Enemy extends Actor
         }
     
     }
-}
+    
+
+ }

@@ -4,32 +4,23 @@ public class Level1 extends World
 {
     //private Clouds img1, img2;
     //private NormalGrassBlock img3, img4;
-    public static int bullets = 15;
+    public static int bullets = 3;
     public static boolean noMoreBullets = false;
     public static int carrots = 0;
     public Level1()
     {    
         super(1032, 624, 1, false);
+        noMoreBullets = false;
+        Star.win = false;
         prepare();
-        
-        /*img1 = new Clouds();
-        addObject(img1, getWidth()/2, getHeight()/2);
-        
-        img2 = new Clouds();
-        addObject(img2, getWidth() + getWidth()/2, getHeight()/2);
-        
-        img3 = new NormalGrassBlock();
-        addObject(img3, getWidth()/2, getHeight()/2);
-        
-        img4 = new NormalGrassBlock();
-        addObject(img4, getWidth() + getWidth()/2, getHeight()/2); */
+
         
         Character.jumpStrength = 20;
     }
 
     public void act()
     {
-        setBackground("sprites/bg.png");
+        setBackground("level1/bg.png");
         if(bullets > 0)
         {
             getBackground().drawImage(new GreenfootImage("Ammo: " + bullets, 30, null, null), 520, 520);
@@ -38,18 +29,12 @@ public class Level1 extends World
            getBackground().drawImage(new GreenfootImage("No more Ammo left!", 30, null, null), 520, 520); 
            noMoreBullets = true;
         }
-        
-        getBackground().drawImage(new GreenfootImage("" + carrots, 30, null, null), 20, 20);
-        
-        /*if(Greenfoot.isKeyDown("d"))
+        if(Star.win == true)
         {
-            img1.scroll();
-            img2.scroll();
-            
-            img3.scroll();
-            img4.scroll();
-            
-        } */
+            getBackground().drawImage(new GreenfootImage("You Win", 80, null, null), 150, 150);
+        }
+        getBackground().drawImage(new GreenfootImage("" + carrots, 30, null, null), 20, 20);
+
     }
     
     private void prepare()
@@ -69,11 +54,11 @@ public class Level1 extends World
         addObject(clouds2,474,185);
         Clouds clouds3 = new Clouds();
         addObject(clouds3,751,73);
-        water water = new water();
+        Water water = new Water();
         addObject(water,99,594);
-        water water2 = new water();
+        Water water2 = new Water();
         addObject(water2,493,602);
-        water water3 = new water();
+        Water water3 = new Water();
         addObject(water3,875,603);
         water3.setLocation(875,596);
         water.setLocation(99,600);
@@ -94,11 +79,11 @@ public class Level1 extends World
         removeObject(water2);
         removeObject(water3);
         removeObject(clouds3);
-        water water4 = new water();
+        Water water4 = new Water();
         addObject(water4,62,599);
-        water water5 = new water();
+        Water water5 = new Water();
         addObject(water5,449,596);
-        water water6 = new water();
+        Water water6 = new Water();
         addObject(water6,831,588);
         water6.setLocation(828,598);
         water5.setLocation(461,600);
@@ -171,5 +156,45 @@ public class Level1 extends World
         carrot3.setLocation(55,28);
         carrot3.setLocation(57,37);
         carrot.setLocation(63,360);
+        enemy3.setLocation(237,379);
+        carrot2.setLocation(360,394);
+        Bridge bridge = new Bridge();
+        addObject(bridge,662,447);
+        bridge.setLocation(681,446);
+        bridge.setLocation(735,442);
+        Bridge bridge2 = new Bridge();
+        addObject(bridge2,650,444);
+        bridge2.setLocation(651,441);
+        bridge2.setLocation(658,448);
+        bridge.setLocation(730,444);
+        bridge.setLocation(727,445);
+        bridge.setLocation(725,446);
+        bridge.setLocation(726,446);
+        bridge.setLocation(727,443);
+        bridge.setLocation(728,447);
+        bridge.setLocation(727,445);
+        bridge.setLocation(724,442);
+        bridge.setLocation(725,444);
+        bridge.setLocation(725,442);
+        bridge.setLocation(729,451);
+        bridge.setLocation(729,452);
+        TallBlock tallBlock = new TallBlock();
+        addObject(tallBlock,823,395);
+        tallBlock.setLocation(826,399);
+        removeObject(bridge2);
+        removeObject(bridge);
+        tallBlock.setLocation(702,383);
+        tallBlock.setLocation(705,504);
+        removeObject(tallBlock);
+        TallBlock tallBlock2 = new TallBlock();
+        addObject(tallBlock2,693,380);
+        tallBlock2.setLocation(703,386);
+        Star star = new Star();
+        addObject(star,750,324);
+        star.setLocation(750,328);
+        star.setLocation(747,224);
+        GoBackToMenu goBackToMenu = new GoBackToMenu();
+        addObject(goBackToMenu,953,578);
+        goBackToMenu.setLocation(941,592);
     }
 }

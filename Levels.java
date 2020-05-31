@@ -42,5 +42,9 @@ public class Levels extends World
         GoBackToMenu goBackToMenu = new GoBackToMenu();
         addObject(goBackToMenu,869,531);
         goBackToMenu.setLocation(932,591);
+        Level2Button level2Button = new Level2Button();
+        addObject(level2Button,275,49);
+        level2Button.setLocation(317,46);
+        level2Button.setLocation(326,49);
     }
 }
