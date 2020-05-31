@@ -6,41 +6,90 @@ public class Character extends Actor
     GifImage run_right = new GifImage("character/run.gif");
     GifImage air = new GifImage("character/air.gif");
     
-    private int vSpeed = 0;
+    private int vSpeed = 5;
     private int acceleration = 1;
-    private int jumpStrength = 12;
+    public static int jumpStrength = 12;
     private boolean jumping;
+    private int counter = 0;
+    private int speed = -3;
+    public static int attraction = 9;
     
     public void act() 
     {
         setImage(idle.getCurrentImage());
         checkFall();
+        shoot();
         checkRightWalls();
         checkLeftWalls();
         platformAbove();
+        counter++;
+        moveWithMovingBlock();
         if(Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d"))
         {
-           setLocation(getX() + 2, getY());
-           setImage(run_right.getCurrentImage());
+           if(!Star.win)
+           {
+               setLocation(getX() + 2, getY());
+               setImage(run_right.getCurrentImage());
+           }
+           
         }
         if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a"))
         {
-           setLocation(getX() - 2, getY());
-           setImage(run_right.getCurrentImage());
+           if(!Star.win)
+           {
+               setLocation(getX() - 2, getY());
+               setImage(run_right.getCurrentImage());
+           }
+           
         }
-        if(Greenfoot.isKeyDown("space"))
+        if(Greenfoot.isKeyDown("space") && !Star.win)
         {
             setImage(air.getCurrentImage());
             jump();
         }
+        if(isTouching(Enemy.class))
+        {
+             getWorld().removeObject(this);
+             Greenfoot.setWorld(new GameOver());
+        }
 
     }
+    
+    public void shoot()
+    {
+        if(Greenfoot.mousePressed(null) && !Level1.noMoreBullets)
+        {
+            Level1.bullets--;
+            Bullet bullet = new Bullet();
+            getWorld().addObject(bullet, getX(), getY());
+            bullet.turnTowards(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
+        }
+    }
+    
+    public void moveWithMovingBlock()
+    {
+        
+        if(isTouching(MovingBlock.class) && !Greenfoot.isKeyDown("d") && !Greenfoot.isKeyDown("a"))
+        {
+        if(MovingBlock.counter < 30)
+        {
+            setLocation(getX() + MovingBlock.speed, getY());
+        }
+        else{
+            MovingBlock.speed =- MovingBlock.speed;
+            MovingBlock.counter = 0;
+        }
+        }
+    }
+        
+        
+         
 
     public boolean platformAbove()
     {
         int spriteHeight = getImage().getHeight();
         int yDistance = (int)(spriteHeight/-2);
-        Actor ceiling = getOneObjectAtOffset(0, yDistance, blocks.class);
+        Actor ceiling = getOneObjectAtOffset(0, yDistance, Blocks.class);
         if (ceiling == null) 
         {
             return false;
@@ -54,7 +103,7 @@ public class Character extends Actor
     {
         int spriteWidth = getImage().getWidth();
         int xDistance = (int)(spriteWidth/2);
-        Actor rightWall = getOneObjectAtOffset(xDistance, 0, blocks.class);
+        Actor rightWall = getOneObjectAtOffset(xDistance, 0, Blocks.class);
         if(rightWall == null)
         {
             return false;
@@ -75,8 +124,11 @@ public class Character extends Actor
     {
         int spriteWidth = getImage().getWidth();
         int xDistance = (int)(spriteWidth/-2);
-        Actor leftWall = getOneObjectAtOffset(xDistance, 0, blocks.class);
-        if(leftWall == null) return false;
+        Actor leftWall = getOneObjectAtOffset(xDistance, 0, Blocks.class);
+        if(leftWall == null)
+        {
+           return false; 
+        }
         stopByLeftWall(leftWall);
         return true;
     }
@@ -98,13 +150,16 @@ public class Character extends Actor
     public void fall()
     {
         setLocation(getX(), getY()+vSpeed);
-        if (vSpeed <= 9) vSpeed = vSpeed+acceleration;
+        if (vSpeed <= attraction) 
+        {
+          vSpeed = vSpeed + acceleration;
+        }
         jumping = true;
     }
 
     public boolean onGround()
     {
-        Actor ground = getOneObjectAtOffset(0, getImage().getHeight()/2, blocks.class);
+        Actor ground = getOneObjectAtOffset(0, getImage().getHeight()/2, Blocks.class);
         if(ground == null)
         {
             return false;
@@ -135,7 +190,14 @@ public class Character extends Actor
     
     public void checkFall()
     {
-        if (onGround()) vSpeed = 0; else fall();
+        if (onGround())
+        {
+            vSpeed = 0;  
+        }
+        else
+        {
+           fall(); 
+        }
     }  
 }
 

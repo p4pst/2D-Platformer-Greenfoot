@@ -8,13 +8,9 @@ public class Levels extends World
     {    
         super(1032, 624, 1);
         setBackground(bg.getCurrentImage());
-        buildWorld();
+        prepare();
     }
 
-    public void buildWorld()
-    {
-        addObject(new GoBackToMenu(), 60, 605);
-    }
 
     public void act()
     {
@@ -35,5 +31,20 @@ public class Levels extends World
     public void gameOver()
     {
         Menu.sound.stop();
+    }
+    
+    private void prepare()
+    {
+        Level1Button level1Button = new Level1Button();
+        addObject(level1Button,135,92);
+        level1Button.setLocation(128,60);
+        level1Button.setLocation(119,47);
+        GoBackToMenu goBackToMenu = new GoBackToMenu();
+        addObject(goBackToMenu,869,531);
+        goBackToMenu.setLocation(932,591);
+        Level2Button level2Button = new Level2Button();
+        addObject(level2Button,275,49);
+        level2Button.setLocation(317,46);
+        level2Button.setLocation(326,49);
     }
 }
