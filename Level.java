@@ -50,7 +50,7 @@ public class Level extends World
         addObject(howToPlay,90,528);
         howToPlay.setLocation(82,583);
         howToPlay howToPlay2 = new howToPlay();
-        addObject(howToPlay2,176,588);
+        addObject(howToPlay2,200,585);
         howToPlay2.setLocation(68,598);
         removeObject(howToPlay2);
         howToPlay.setLocation(86,597);
@@ -98,6 +98,6 @@ public class Level extends World
         level1Button.setLocation(158,58);
         level1Button.setLocation(125,62);
         howToPlay.setLocation(88,583);
-        howToPlay.setLocation(99,586);
+        howToPlay.setLocation(125,580);
     }
 }

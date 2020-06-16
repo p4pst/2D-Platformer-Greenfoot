@@ -12,7 +12,7 @@ public class GameOver extends World
     
     public GameOver()
     {    
-        super(830, 624, 1, false); 
+        super(1032, 624, 1, false); 
         
         Level1.bullets = 3;
         Level1.carrots = 0;

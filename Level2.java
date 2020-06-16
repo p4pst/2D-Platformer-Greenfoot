@@ -1,14 +1,27 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Level2 extends World
 {
-    public static int bullets = 3;
     public static boolean noMoreBullets = false;
-    public static int carrots = 0;
     public void act()
     {
         setBackground("Level2/bg.png");    
         Bullet.speed = 5;
+        getBackground().drawImage(new GreenfootImage("" + Level1.carrots, 30, Color.WHITE, null), 20, 20);
+        if(Level1.bullets > 0)
+        {
+            getBackground().drawImage(new GreenfootImage("Ammo: " + Level1.bullets, 30 , Color.WHITE, null), 520, 520);   
+        }
+        else
+        {
+            getBackground().drawImage(new GreenfootImage("No more Ammo left!", 30, Color.WHITE, null, null), 520, 520); 
+            Level1.noMoreBullets = true;
+        }
+        if(Star.win == true)
+        {
+            getBackground().drawImage(new GreenfootImage("You Win", 80, Color.WHITE, null), 150, 150);
+        }
     }
     public Level2()
     {    
@@ -17,19 +30,6 @@ public class Level2 extends World
         Character.jumpStrength = 20;
         Character.attraction = 4;
         Enemy2.enemyHealth = 5;
-        if(bullets > 0)
-        {
-            getBackground().drawImage(new GreenfootImage("Ammo: " + bullets, 30 , Color.WHITE, null, null), 520, 520);
-        }
-        else{
-            getBackground().drawImage(new GreenfootImage("No more Ammo left!", 30, Color.WHITE, null, null), 520, 520); 
-            noMoreBullets = true;
-        }
-        if(Star.win == true)
-        {
-            getBackground().drawImage(new GreenfootImage("You Win", 80, Color.WHITE, null, null), 150, 150);
-        }
-        getBackground().drawImage(new GreenfootImage("" + carrots, 30, null, null), 20, 20);
         prepare();
     }
    
