@@ -40,7 +40,6 @@ public class Character extends Actor
                setLocation(getX() - 2, getY());
                setImage(run_right.getCurrentImage());
            }
-           
         }
         if(Greenfoot.isKeyDown("space") && !Star.win)
         {
