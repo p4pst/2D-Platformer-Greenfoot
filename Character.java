@@ -47,7 +47,7 @@ public class Character extends Actor
             setImage(air.getCurrentImage());
             jump();
         }
-        if(isTouching(Enemy.class))
+        if(isTouching(Enemy.class) || getY() > 624 || isTouching(BulletOfEnemy.class))
         {
              getWorld().removeObject(this);
              Greenfoot.setWorld(new GameOver());
