@@ -34,6 +34,8 @@ public class Level1 extends World
         if(Star.win == true)
         {
             getBackground().drawImage(new GreenfootImage("You Win", 80, null, null), 150, 150);
+            Greenfoot.delay(60);
+            Greenfoot.setWorld(new Level2());
         }
         getBackground().drawImage(new GreenfootImage("" + carrots, 30, null, null), 20, 20);
     }

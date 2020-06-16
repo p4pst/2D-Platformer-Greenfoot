@@ -1,17 +1,17 @@
-
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 public class Level2 extends World
 {
     public static boolean noMoreBullets = false;
+    int bullets = Level1.bullets + 5;
     public void act()
     {
         setBackground("Level2/bg.png");    
         Bullet.speed = 5;
         getBackground().drawImage(new GreenfootImage("" + Level1.carrots, 30, Color.WHITE, null), 20, 20);
-        if(Level1.bullets > 0)
+        if(bullets > 0)
         {
-            getBackground().drawImage(new GreenfootImage("Ammo: " + Level1.bullets, 30 , Color.WHITE, null), 520, 520);   
+            getBackground().drawImage(new GreenfootImage("Ammo: " + bullets, 30 , Color.WHITE, null), 520, 520);   
         }
         else
         {
