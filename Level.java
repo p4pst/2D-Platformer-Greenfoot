@@ -81,7 +81,7 @@ public class Level extends World
         level1Button.setLocation(153,46);
         level2Button.setLocation(352,63);
         level1Button.setLocation(159,47);
-        level2Button.setLocation(316,60);
+        level2Button.setLocation(350,60);
         level1Button.setLocation(154,51);
         level1Button.setLocation(110,66);
         level1Button.setLocation(130,76);
