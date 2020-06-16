@@ -1,18 +1,7 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
-/**
- * Write a description of class Tutorial here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Tutorial extends World
 {
-
-    /**
-     * Constructor for objects of class Tutorial.
-     * 
-     */
     public Tutorial()
     {    
         super(1032, 624, 1, false); 
@@ -20,10 +9,6 @@ public class Tutorial extends World
         prepare();
     }
 
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
     private void prepare()
     {
         NormalGrassBlock normalGrassBlock = new NormalGrassBlock();
