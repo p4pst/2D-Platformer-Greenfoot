@@ -42,7 +42,9 @@ public class Enemy extends Actor
            frame = 1;
        }
        frame++;
-       }  
+       }
+       
+       
        
 
     }

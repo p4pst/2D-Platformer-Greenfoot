@@ -4,17 +4,18 @@ public class Level1 extends World
 {
     //private Clouds img1, img2;
     //private NormalGrassBlock img3, img4;
-    public static int bullets = 3;
+    public static int bullets = 5;
     public static boolean noMoreBullets = false;
     public static int carrots = 0;
     public Level1()
     {    
         super(1032, 624, 1, false);
+        Bullet.speed = 9;
         noMoreBullets = false;
         Star.win = false;
+        bullets = 3;
+        Character.attraction = 9;
         prepare();
-
-        
         Character.jumpStrength = 20;
     }
 
@@ -25,16 +26,18 @@ public class Level1 extends World
         {
             getBackground().drawImage(new GreenfootImage("Ammo: " + bullets, 30, null, null), 520, 520);
         }
-        else{
+        else
+        {
            getBackground().drawImage(new GreenfootImage("No more Ammo left!", 30, null, null), 520, 520); 
            noMoreBullets = true;
         }
         if(Star.win == true)
         {
             getBackground().drawImage(new GreenfootImage("You Win", 80, null, null), 150, 150);
+            Greenfoot.delay(60);
+            Greenfoot.setWorld(new Level2());
         }
         getBackground().drawImage(new GreenfootImage("" + carrots, 30, null, null), 20, 20);
-
     }
     
     private void prepare()

@@ -40,19 +40,17 @@ public class Character extends Actor
                setLocation(getX() - 2, getY());
                setImage(run_right.getCurrentImage());
            }
-           
         }
         if(Greenfoot.isKeyDown("space") && !Star.win)
         {
             setImage(air.getCurrentImage());
             jump();
         }
-        if(isTouching(Enemy.class))
+        if(isTouching(Enemy.class) || getY() > 624 || isTouching(BulletOfEnemy.class))
         {
              getWorld().removeObject(this);
              Greenfoot.setWorld(new GameOver());
         }
-
     }
     
     public void shoot()
@@ -68,23 +66,19 @@ public class Character extends Actor
     
     public void moveWithMovingBlock()
     {
-        
         if(isTouching(MovingBlock.class) && !Greenfoot.isKeyDown("d") && !Greenfoot.isKeyDown("a"))
         {
-        if(MovingBlock.counter < 30)
-        {
-            setLocation(getX() + MovingBlock.speed, getY());
-        }
-        else{
-            MovingBlock.speed =- MovingBlock.speed;
-            MovingBlock.counter = 0;
-        }
+            if(MovingBlock.counter < 30)
+            {
+                setLocation(getX() + MovingBlock.speed, getY());
+            }
+            else
+            {
+                MovingBlock.speed =- MovingBlock.speed;
+                MovingBlock.counter = 0;
+            }
         }
     }
-        
-        
-         
-
     public boolean platformAbove()
     {
         int spriteHeight = getImage().getHeight();

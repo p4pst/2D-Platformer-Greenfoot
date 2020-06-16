@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bullet extends Actor
 {
-    int speed = 10;
+    public static int speed = 10;
     public void act() 
     {
         setImage("sprites/blocks/mushroom2.png");
