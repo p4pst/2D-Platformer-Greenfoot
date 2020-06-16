@@ -13,6 +13,7 @@ public class howToPlay extends Actor
     public void act() 
     {
         setImage(button);
+        button.scale(165, 55);
         MouseInfo mouse = Greenfoot.getMouseInfo();
         if (mouse != null) {
             button.scale(165, 55);

@@ -52,7 +52,6 @@ public class Character extends Actor
              getWorld().removeObject(this);
              Greenfoot.setWorld(new GameOver());
         }
-
     }
     
     public void shoot()
@@ -68,23 +67,19 @@ public class Character extends Actor
     
     public void moveWithMovingBlock()
     {
-        
         if(isTouching(MovingBlock.class) && !Greenfoot.isKeyDown("d") && !Greenfoot.isKeyDown("a"))
         {
-        if(MovingBlock.counter < 30)
-        {
-            setLocation(getX() + MovingBlock.speed, getY());
-        }
-        else{
-            MovingBlock.speed =- MovingBlock.speed;
-            MovingBlock.counter = 0;
-        }
+            if(MovingBlock.counter < 30)
+            {
+                setLocation(getX() + MovingBlock.speed, getY());
+            }
+            else
+            {
+                MovingBlock.speed =- MovingBlock.speed;
+                MovingBlock.counter = 0;
+            }
         }
     }
-        
-        
-         
-
     public boolean platformAbove()
     {
         int spriteHeight = getImage().getHeight();
