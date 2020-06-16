@@ -52,7 +52,6 @@ public class Character extends Actor
              getWorld().removeObject(this);
              Greenfoot.setWorld(new GameOver());
         }
-
     }
     
     public void shoot()
@@ -81,10 +80,6 @@ public class Character extends Actor
         }
         }
     }
-        
-        
-         
-
     public boolean platformAbove()
     {
         int spriteHeight = getImage().getHeight();

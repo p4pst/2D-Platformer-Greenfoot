@@ -34,7 +34,6 @@ public class Level1 extends World
             getBackground().drawImage(new GreenfootImage("You Win", 80, null, null), 150, 150);
         }
         getBackground().drawImage(new GreenfootImage("" + carrots, 30, null, null), 20, 20);
-
     }
     
     private void prepare()
