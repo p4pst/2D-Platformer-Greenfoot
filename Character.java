@@ -60,7 +60,7 @@ public class Character extends Actor
             Level1.bullets--;
             Bullet bullet = new Bullet();
             getWorld().addObject(bullet, getX(), getY());
-            bullet.turnTowards(Greenfoot.getMouseInfo().getX(), Greenfoot.getMouseInfo().getY());
+            bullet.turnTowards(getX(), getY());
         }
     }
     
