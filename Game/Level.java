@@ -15,24 +15,7 @@ public class Level extends World
     public void act()
     {
         setBackground(bg.getCurrentImage());
-    }
-
-    public void started()
-    {
-        Menu.sound.play();
-        Menu.sound.setVolume(40);
-    }
-
-    public void stopped()
-    {     
-        Menu.sound.stop();
-    }
-
-    public void gameOver()
-    {
-        Menu.sound.stop();
-    }
-    
+    }    
     private void prepare()
     {
         Level1Button level1Button = new Level1Button();

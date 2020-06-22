@@ -19,5 +19,4 @@ public class Menu extends World
     {
         setBackground(bg.getCurrentImage());
     }   
-
 }

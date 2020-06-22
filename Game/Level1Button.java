@@ -25,7 +25,6 @@ public class Level1Button extends Actor
         if(Greenfoot.mouseClicked(this))
         {
             Greenfoot.setWorld(new Level1());
-            Menu.sound.stop();
             button.scale(165, 55);
         }
     }    

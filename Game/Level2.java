@@ -7,8 +7,7 @@ public class Level2 extends World
     {
         setBackground("Level2/bg.png");
         Bullet.speed = 5;
-        getBackground().drawImage(new GreenfootImage("" + Level1.carrots, 30, Color.WHITE, null), 20, 20);   
-        
+        getBackground().drawImage(new GreenfootImage("" + Level1.carrots, 30, Color.WHITE, null), 20, 20);      
         if(bullets > 0)
         {
             getBackground().drawImage(new GreenfootImage("Ammo: " + bullets, 30, Color.WHITE, null, null), 520, 520);
@@ -18,12 +17,11 @@ public class Level2 extends World
            getBackground().drawImage(new GreenfootImage("No more Ammo left!", 30, Color.WHITE, null, null), 520, 520); 
            Level1.noMoreBullets = true;
         }
-        
         if(Star.win == true)
         {
-            getBackground().drawImage(new GreenfootImage("You Win", 80,Color.WHITE, null, null), 150, 150);
+            getBackground().drawImage(new GreenfootImage("You Win", 80, Color.WHITE, null, null), 150, 150);
             Greenfoot.delay(60);
-            Greenfoot.setWorld(new Level2());
+            Greenfoot.setWorld(new Level3());
         }
     }
     public Level2()

@@ -11,7 +11,7 @@ public class Character extends Actor
     public static int jumpStrength = 12;
     private boolean jumping;
     private int counter = 0;
-    private int speed = -3;
+    public static  int speed = 4;
     public static int attraction = 9;
     
     public void act() 
@@ -30,8 +30,7 @@ public class Character extends Actor
            {
                setLocation(getX() + 2, getY());
                setImage(run_right.getCurrentImage());
-           }
-           
+           }  
         }
         if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a"))
         {
@@ -59,9 +58,9 @@ public class Character extends Actor
         {
             Level1.bullets--;
             Level2.bullets--;
+            Level3.bullets--;
             Bullet bullet = new Bullet();
             getWorld().addObject(bullet, getX(), getY());
-            bullet.turnTowards(getX(), getY());
         }
     }
     
@@ -193,7 +192,11 @@ public class Character extends Actor
         {
            fall(); 
         }
-    }  
+    }
+    public void checkBlocks()
+    {
+        
+    }
 }
 
 
