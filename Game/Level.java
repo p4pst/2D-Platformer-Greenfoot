@@ -99,5 +99,14 @@ public class Level extends World
         level1Button.setLocation(125,62);
         howToPlay.setLocation(88,583);
         howToPlay.setLocation(125,580);
+        Level3Button level3Button = new Level3Button();
+        addObject(level3Button,594,67);
+        level3Button.setLocation(602,69);
+        level3Button.setLocation(612,76);
+        level3Button.setLocation(553,69);
+        level3Button.setLocation(554,70);
+        level3Button.setLocation(602,49);
+        level3Button.setLocation(623,55);
+        level3Button.setLocation(621,61);
     }
 }

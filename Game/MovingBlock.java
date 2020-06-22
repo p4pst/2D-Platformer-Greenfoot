@@ -20,7 +20,7 @@ public class MovingBlock extends Blocks
     
     public void moveAround()
     {
-        if(counter < 30)
+        if(counter < 40)
         {
             setLocation(getX() + speed, getY());
         }

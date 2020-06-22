@@ -8,8 +8,10 @@ public class Level1 extends World
     public Level1()
     {    
         super(1032, 624, 1, false);
+        carrots = 0;
         Bullet.speed = 9;
         Enemy.enemyHealth = 1;
+        bullets = 5;
         noMoreBullets = false;
         Star.win = false;
         Character.attraction = 9;
@@ -173,5 +175,9 @@ public class Level1 extends World
         GoBackToMenu goBackToMenu = new GoBackToMenu();
         addObject(goBackToMenu,953,578);
         goBackToMenu.setLocation(941,592);
+
+        Clouds clouds7 = new Clouds();
+        addObject(clouds7,193,154);
+        removeObject(clouds7);
     }
 }

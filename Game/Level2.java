@@ -32,6 +32,7 @@ public class Level2 extends World
         Star.win = false;
         bullets = 8;
         Enemy.enemyHealth  = 2;
+        Level1.carrots = 0;
         Level1.noMoreBullets = false;
         Character.jumpStrength = 20;
         Character.attraction = 4;

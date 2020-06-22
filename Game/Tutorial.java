@@ -50,7 +50,7 @@ public class Tutorial extends World
     public void act()
     {
         getBackground().drawImage(new GreenfootImage("Use Arrow Keys to move or just press A and D", 30, null, null), 520, 520);
-        getBackground().drawImage(new GreenfootImage("The bullet will fly to the position you clicked on", 30, null, null), 280, 180);
+        getBackground().drawImage(new GreenfootImage("The bullet can only fly straight ahead", 30, null, null), 280, 180);
         getBackground().drawImage(new GreenfootImage("Press space to jump", 30, null, null), 540, 80);
         getBackground().drawImage(new GreenfootImage("Press left mouse button to shoot", 30, null, null), 80, 70);
     } 
