@@ -2,8 +2,6 @@ import greenfoot.*;
 
 public class Level1 extends World
 {
-    //private Clouds img1, img2;
-    //private NormalGrassBlock img3, img4;
     public static int bullets = 5;
     public static boolean noMoreBullets = false;
     public static int carrots = 0;
@@ -11,9 +9,9 @@ public class Level1 extends World
     {    
         super(1032, 624, 1, false);
         Bullet.speed = 9;
+        Enemy.enemyHealth = 1;
         noMoreBullets = false;
         Star.win = false;
-        bullets = 3;
         Character.attraction = 9;
         prepare();
         Character.jumpStrength = 20;

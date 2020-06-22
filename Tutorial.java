@@ -7,6 +7,8 @@ public class Tutorial extends World
         super(1032, 624, 1, false); 
         setBackground("level1/bg.png");
         prepare();
+        Character.attraction = 9;
+        Character.jumpStrength = 10;
     }
 
     private void prepare()
@@ -37,11 +39,18 @@ public class Tutorial extends World
         GoBackToMenu goBackToMenu = new GoBackToMenu();
         addObject(goBackToMenu,868,581);
         goBackToMenu.setLocation(942,583);
+        normalGrassBlock4.setLocation(385,431);
+        normalGrassBlock5.setLocation(471,429);
+        normalGrassBlock4.setLocation(387,427);
+        normalGrassBlock5.setLocation(473,424);
+        normalGrassBlock5.setLocation(473,423);
+        normalGrassBlock5.setLocation(475,426);
     }
     
     public void act()
     {
-        getBackground().drawImage(new GreenfootImage("Press A or D to move", 30, null, null), 520, 520);
+        getBackground().drawImage(new GreenfootImage("Use Arrow Keys to move or just press A and D", 30, null, null), 520, 520);
+        getBackground().drawImage(new GreenfootImage("The bullet will fly to the position you clicked on", 30, null, null), 280, 180);
         getBackground().drawImage(new GreenfootImage("Press space to jump", 30, null, null), 540, 80);
         getBackground().drawImage(new GreenfootImage("Press left mouse button to shoot", 30, null, null), 80, 70);
     } 

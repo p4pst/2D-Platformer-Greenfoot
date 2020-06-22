@@ -9,6 +9,7 @@ public class Enemy extends Actor
     int animateCounter = 0;
     Character character;
     Enemy enemy;
+    public static int enemyHealth = 1;
     public void act() 
     {
        counter++;
@@ -44,7 +45,13 @@ public class Enemy extends Actor
        frame++;
        }
        
-       
+       if(isTouching(Bullet.class))
+        {
+            enemyHealth--;
+        }
+        if(enemyHealth == 0){
+            getWorld().removeObject(this);
+        }
        
 
     }
@@ -59,10 +66,7 @@ public class Enemy extends Actor
             counter = 0;
         }
         
-        if(isTouching(Bullet.class))
-        {
-            getWorld().removeObject(this);
-        }
+        
     
     }
     
