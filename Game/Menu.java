@@ -3,7 +3,6 @@ import greenfoot.*;
 public class Menu extends World
 {
     GifImage bg = new GifImage("menu/bg.gif");
-    public static GreenfootSound sound = new GreenfootSound("theme_music.mp3");
     
     public Menu()
     {
@@ -20,17 +19,5 @@ public class Menu extends World
     {
         setBackground(bg.getCurrentImage());
     }   
-    public void started()
-    {
-        sound.play();
-        sound.setVolume(40);
-    }
-    public void stopped()
-    {     
-        sound.stop();
-    }
-    public void gameOver()
-    {
-        sound.stop();
-    }
+
 }
