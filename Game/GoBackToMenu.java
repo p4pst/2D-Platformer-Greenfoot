@@ -21,7 +21,7 @@ public class GoBackToMenu extends Actor
                     button.scale(188, 63);
                     if(Greenfoot.mouseClicked(this))
                     {
-                        Greenfoot.setWorld(new Level());
+                        Greenfoot.setWorld(new Menu());
                     }
                 }
             }

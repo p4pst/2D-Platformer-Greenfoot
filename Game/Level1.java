@@ -2,18 +2,18 @@ import greenfoot.*;
 
 public class Level1 extends World
 {
-    //private Clouds img1, img2;
-    //private NormalGrassBlock img3, img4;
     public static int bullets = 5;
     public static boolean noMoreBullets = false;
     public static int carrots = 0;
     public Level1()
     {    
         super(1032, 624, 1, false);
+        carrots = 0;
         Bullet.speed = 9;
+        Enemy.enemyHealth = 1;
+        bullets = 5;
         noMoreBullets = false;
         Star.win = false;
-        bullets = 3;
         Character.attraction = 9;
         prepare();
         Character.jumpStrength = 20;
@@ -175,5 +175,9 @@ public class Level1 extends World
         GoBackToMenu goBackToMenu = new GoBackToMenu();
         addObject(goBackToMenu,953,578);
         goBackToMenu.setLocation(941,592);
+
+        Clouds clouds7 = new Clouds();
+        addObject(clouds7,193,154);
+        removeObject(clouds7);
     }
 }

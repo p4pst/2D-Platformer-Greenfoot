@@ -2,31 +2,38 @@ import greenfoot.*;
 
 public class Level2 extends World
 {
-    public static boolean noMoreBullets = false;
-    int bullets = Level1.bullets + 5;
+    public static int bullets = Level1.bullets + 3;
     public void act()
     {
-        setBackground("Level2/bg.png");    
+        setBackground("Level2/bg.png");
         Bullet.speed = 5;
-        getBackground().drawImage(new GreenfootImage("" + Level1.carrots, 30, Color.WHITE, null), 20, 20);
+        getBackground().drawImage(new GreenfootImage("" + Level1.carrots, 30, Color.WHITE, null), 20, 20);   
+        
         if(bullets > 0)
         {
-            getBackground().drawImage(new GreenfootImage("Ammo: " + bullets, 30 , Color.WHITE, null), 520, 520);   
+            getBackground().drawImage(new GreenfootImage("Ammo: " + bullets, 30, Color.WHITE, null, null), 520, 520);
         }
         else
         {
-            getBackground().drawImage(new GreenfootImage("No more Ammo left!", 30, Color.WHITE, null, null), 520, 520); 
-            Level1.noMoreBullets = true;
+           getBackground().drawImage(new GreenfootImage("No more Ammo left!", 30, Color.WHITE, null, null), 520, 520); 
+           Level1.noMoreBullets = true;
         }
+        
         if(Star.win == true)
         {
-            getBackground().drawImage(new GreenfootImage("You Win", 80, Color.WHITE, null), 150, 150);
+            getBackground().drawImage(new GreenfootImage("You Win", 80,Color.WHITE, null, null), 150, 150);
+            Greenfoot.delay(60);
+            Greenfoot.setWorld(new Level2());
         }
     }
     public Level2()
     {    
         super(1032, 624, 1, false); 
         Star.win = false;
+        bullets = 8;
+        Enemy.enemyHealth  = 2;
+        Level1.carrots = 0;
+        Level1.noMoreBullets = false;
         Character.jumpStrength = 20;
         Character.attraction = 4;
         Enemy2.enemyHealth = 5;
@@ -78,5 +85,15 @@ public class Level2 extends World
         star.setLocation(921,309);
         star.setLocation(918,250);
         enemy2.setLocation(475,309);
+        Enemy enemy = new Enemy();
+        addObject(enemy,919,336);
+        enemy.setLocation(912,330);
+        enemy.setLocation(912,311);
+        enemy.setLocation(916,261);
+        enemy.setLocation(920,288);
+        enemy.setLocation(922,275);
+        Enemy enemy3 = new Enemy();
+        addObject(enemy3,895,316);
+        removeObject(enemy3);
     }
 }

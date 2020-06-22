@@ -58,6 +58,7 @@ public class Character extends Actor
         if(Greenfoot.mousePressed(null) && !Level1.noMoreBullets)
         {
             Level1.bullets--;
+            Level2.bullets--;
             Bullet bullet = new Bullet();
             getWorld().addObject(bullet, getX(), getY());
             bullet.turnTowards(getX(), getY());
