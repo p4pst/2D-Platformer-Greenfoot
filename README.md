@@ -36,4 +36,4 @@ Please make sure to update tests as appropriate.
 
 ## Developers
 Sebastian Muric -> [GitHub Profile](https://github.com/Drahtpfanne)  
-Walter Pichl -- > 
+Walter Pichl -- > [GitHub Profile](https://github.com/wp23)
