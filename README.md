@@ -26,9 +26,9 @@ The [Greenfoot Engine](https://www.greenfoot.org/download)
 5. Import the GreenfootController.xml
 6. Apply the config to Controller-1
 7. select different slot if more controller plugged in
-8. Open Greenfoot and the game.
-9. Startet playing.
-10. Move with cross, shoot with circle and use bumper to jump
+8. Open Greenfoot and start the game.
+9. Press start and play.
+10. Move with cross, shoot with circle, bumper to jump
 ```
 
 ## Contributing
