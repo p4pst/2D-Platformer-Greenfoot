@@ -25,7 +25,7 @@ The [Greenfoot Engine](https://www.greenfoot.org/download)
 4. Plug in the controller per USB or Bluetooth
 5. Import the GreenfootController.xml
 6. Apply the config to Controller-1
-7. (can be skipped) select different if more controller plugged in
+7. select different slot if more controller plugged in
 8. Open Greenfoot and the game.
 9. Startet playing.
 10. Move with cross, shoot with circle and use bumper to jump
