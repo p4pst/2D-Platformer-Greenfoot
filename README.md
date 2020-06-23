@@ -28,7 +28,7 @@ The [Greenfoot Engine](https://www.greenfoot.org/download)
 7. select different slot if more controller plugged in
 8. Open Greenfoot and start the game.
 9. Press start and play.
-10. Move with cross, shoot with circle, bumper to jump
+10. Move with cross, shoot with circle, use bumper to jump
 ```
 
 ## Contributing
