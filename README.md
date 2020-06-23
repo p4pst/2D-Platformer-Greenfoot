@@ -19,7 +19,7 @@ The [Greenfoot Engine](https://www.greenfoot.org/download)
 <img align="right" src="https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-72015429/mobile_786_587.png" height="207" width="321">
 
 ```
-1. Download the project and go to the ControllerWrapper folder.
+1. Download the project and goto the ControllerWrapper.
 2. Open DS4Windows.exe
 3. Save the files to %AppData%/Roaming
 4. Plug in the controller per USB or Bluetooth
