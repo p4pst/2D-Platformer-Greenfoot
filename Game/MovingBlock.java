@@ -1,15 +1,10 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
-/**
- * Write a description of class MovingBlock here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class MovingBlock extends Blocks
 {
     public static int counter = 0;
     public static int speed = -2;
+    
     public void act() 
     {
         setImage("sprites/blocks/ground4.png");
@@ -24,7 +19,8 @@ public class MovingBlock extends Blocks
         {
             setLocation(getX() + speed, getY());
         }
-        else{
+        else
+        {
             speed =- speed;
             counter = 0;
         }

@@ -3,6 +3,7 @@ import greenfoot.*;
 public class Level3 extends World
 {
     public static int bullets = Level1.bullets + 3;
+    
     public void act()
     {
         setBackground("Level3/bg.png");
@@ -24,6 +25,7 @@ public class Level3 extends World
             Greenfoot.setWorld(new YouWon());
         }
     }
+    
     public Level3()
     {    
         super(1032, 624, 1, false);

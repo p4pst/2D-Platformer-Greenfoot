@@ -5,6 +5,7 @@ public class Level1 extends World
     public static int bullets = 5;
     public static boolean noMoreBullets = false;
     public static int carrots = 0;
+    
     public Level1()
     {    
         super(1032, 624, 1, false);
@@ -175,7 +176,6 @@ public class Level1 extends World
         GoBackToMenu goBackToMenu = new GoBackToMenu();
         addObject(goBackToMenu,953,578);
         goBackToMenu.setLocation(941,592);
-
         Clouds clouds7 = new Clouds();
         addObject(clouds7,193,154);
         removeObject(clouds7);

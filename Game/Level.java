@@ -11,11 +11,11 @@ public class Level extends World
         prepare();
     }
 
-
     public void act()
     {
         setBackground(bg.getCurrentImage());
-    }    
+    }
+    
     private void prepare()
     {
         Level1Button level1Button = new Level1Button();

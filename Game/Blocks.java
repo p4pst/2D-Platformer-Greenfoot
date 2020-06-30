@@ -1,11 +1,8 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 public class Blocks extends Actor
-{
-    
+{  
     public void act() 
-    {
-        
-    }  
-
+    {    
+    }
 }

@@ -17,10 +17,6 @@ public class YouWon extends World
         getBackground().drawImage(new GreenfootImage("Project by: Sebastian Muric, Walter Pichl", 30, Color.WHITE, null), 10, 590);
     }   
 
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
     private void prepare()
     {
         GoBackToMenu goBackToMenu = new GoBackToMenu();

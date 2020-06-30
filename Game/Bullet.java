@@ -1,14 +1,9 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
-/**
- * Write a description of class Bullet here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Bullet extends Actor
 {
     public static int speed = 10;
+    
     public void act() 
     {
         setImage("sprites/blocks/mushroom2.png");
@@ -23,6 +18,5 @@ public class Bullet extends Actor
     
     public void turnToMouse()
     {
-        
     }
 }
