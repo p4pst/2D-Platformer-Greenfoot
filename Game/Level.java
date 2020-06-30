@@ -90,6 +90,6 @@ public class Level extends World
         level3Button.setLocation(554,70);
         level3Button.setLocation(602,49);
         level3Button.setLocation(623,55);
-        level3Button.setLocation(621,61);
+        level3Button.setLocation(580,61);
     }
 }
